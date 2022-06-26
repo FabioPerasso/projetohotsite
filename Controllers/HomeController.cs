@@ -29,8 +29,10 @@ namespace Hotsite.Controllers
             try{
                 DatabaseService dbs = new DatabaseService();
                 dbs.CadastraInteresse(cad);
+                @ViewData["Mensagem"] = "Cadastro efetuado com sucesso";
             } catch(Exception e){
                 _logger.LogError("Erro ao gravar no banco " + e.Message);
+                @ViewData["Mensagem"] = "Erro de cadastro. Tente mais tarde.";
             }
             return View("Index",cad);
         }
