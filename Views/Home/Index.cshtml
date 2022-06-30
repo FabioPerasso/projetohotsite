@@ -2,52 +2,231 @@
 @{
    // ViewData["Title"] = "Hotsite";
 }
-<div class="row">
-    <div class="col-md-6">
-        <div>
-            <h1>Iniciativa Saúde da Cidade</h1>
-            <p>
-                Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-            </p>
-            <p>
-                Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-            </p>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="PT-BR">
 
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <div>
-            <h2>Entre em contato!:</h2>
-            <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
-            <p class="text-danger">@ViewData["Mensagem"]</p>
-            <form action="/Home/Cadastrar" method="POST">
-                <div>
-                    <label asp-for="Nome">Nome:</label>
-                    <input asp-for="Nome" required/>
+	<head>
+		<title>EAD CicloOperFinac</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Senac, Senac RS, Projeto Integrador, Atividades, Educação Financeira"/>
+        <meta name="description" content="Projeto Informática"/>
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+        
+	</head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <h1>Iniciativa Saúde da Cidade</h1>
+                        <p>
+                            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+                        </p>
+                        <p>
+                            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <label asp-for="Email">Email:</label>
-                    <input asp-for="Email" required/>
-                </div>
-                <div>
-                    <label asp-for="Mensagem">Mensagem (opcional):</label>
-                    <textarea asp-for="Mensagem"></textarea>
-                </div>
-                <div>
-                    <input type="submit" value="Enviar" />
-                </div>
-            </form>
+                
+                <div class="col-md-6">
+                    <div>
+                     <img src="~/Imagem/envelope.JPG" style="width:80%;height=50%">
+                    </div>
+                </div>  
+            </div>
+
+            <div class="row">
+                <span class="border border-dark">
+                    <div class="col-md-6">
+                        <div>
+                            <h2>Entre em contato!:</h2>
+                            <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+                            <p class="text-danger">@ViewData["Mensagem"]</p>
+                            <form action="/Home/Cadastrar" method="POST">
+                                <div>
+                                    <label asp-for="Nome">Nome:</label>
+                                    <input asp-for="Nome" required/>
+                                </div>
+                                <div>
+                                    <label asp-for="Email">Email:</label>
+                                    <input asp-for="Email" required/>
+                                </div>
+                                <div>
+                                    <label asp-for="Mensagem">Mensagem (opcional):</label>
+                                    <textarea asp-for="Mensagem"></textarea>
+                                </div>
+                                <div>
+                                    <input type="submit" value="Enviar" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </span>             
+                    <div class="col-md-2">
+                        <img src="~/Imagem/envelope.JPG" style="width:100%;height=50%"><br>
+                  <!--      <a href="#">Agenda de eventos</a> -->
+                        <!-- Scrollable modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo1">
+                        Agenda de eventos
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalLongoExemplo1" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                         <!--   <div class="modal-dialog" role="document"> -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="TituloModalLongoExemplo1">Agenda</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        10/10/10  10:10 - Evento 1
+                                        <br>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac interdum elit. 
+                                        <br><br>
+                                        10/10/10  10:10 - Evento 1
+                                        <br>
+                                        Maecenas non finibus urna, id tempor velit. In hac habitasse platea dictumst. Aliquam erat volutpat. 
+                                        <br><br>
+                                        10/10/10  10:10 - Evento 1
+                                        <br>
+                                        Vivamus dui augue, tristique vel commodo sed, malesuada a lacus. Nullam varius ante ac mi fermentum, in aliquet nunc iaculis. 
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                             <!--           <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div class="col-md-2"> 
+                        <img src="~/Imagem/envelope.JPG" style="width:100%;height=50%"><br>    
+                <!--        <a href="#">  Dicas de vida saudável</a> -->
+                        <!-- Botão para acionar modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo2">
+                        Dicas de Vida saudável
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalLongoExemplo2" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                         <!--   <div class="modal-dialog" role="document"> -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="TituloModalLongoExemplo2">Dicas de Vida saudável</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum lacus vel quam faucibus, vel vestibulum nisl ultrices. Nullam lacus nisi, lobortis et est ac, scelerisque pulvinar elit. Integer commodo tempor dolor, ut ultricies arcu porttitor et. Nam sed sagittis eros, at tincidunt lacus. Proin volutpat porttitor aliquam. Pellentesque fermentum felis ut bibendum pretium. Vivamus cursus dapibus iaculis. Maecenas interdum nunc ullamcorper, maximus odio sed, efficitur leo. Morbi ac interdum elit. Etiam eu dignissim neque, id suscipit tortor. Integer nec porttitor lectus. Fusce convallis interdum nibh, vel mattis mi fermentum et. Vestibulum ac ex turpis. Sed finibus elit pretium dolor efficitur, id rutrum mi rutrum.
+                                        <br><br>
+                                        Maecenas non finibus urna, id tempor velit. In hac habitasse platea dictumst. Aliquam erat volutpat. Suspendisse pharetra molestie fermentum. Praesent ullamcorper urna et est condimentum, eget pulvinar libero convallis. Vivamus eget elit enim. Vestibulum tempor eleifend arcu, et dapibus leo tempor sed. Morbi a scelerisque eros. Vivamus a elementum erat. Aenean lobortis neque sit amet est auctor, in molestie est molestie. Sed laoreet ullamcorper augue id interdum. Cras vitae lectus eu massa vehicula tincidunt sit amet id erat. Curabitur neque lacus, auctor vitae efficitur ac, interdum nec augue. Nulla nec sapien vitae eros auctor consectetur. Quisque id erat turpis.
+                                        <br><br>
+                                        Vivamus dui augue, tristique vel commodo sed, malesuada a lacus. Nullam varius ante ac mi fermentum, in aliquet nunc iaculis. Duis iaculis hendrerit nunc consectetur fringilla. Cras suscipit odio ac magna dictum luctus. Integer nec sem sapien. Morbi mattis, velit nec bibendum semper, diam nunc porttitor velit, posuere vehicula velit ex non nibh. Pellentesque sit amet pulvinar nunc, ac semper neque. Morbi tellus felis, euismod non volutpat non, fermentum sed justo. Phasellus eleifend enim ante, ac tempus purus tincidunt a. In quis cursus neque. Nulla non tincidunt leo. Pellentesque a erat a diam faucibus ultrices id laoreet erat. Aliquam tincidunt quis dui at condimentum. Curabitur consectetur dignissim pulvinar. Vivamus quis elit non tellus bibendum interdum.
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                             <!--           <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                
+            
+                    <div class="col-md-2">
+                        <img src="~/Imagem/envelope.JPG" style="width:100%;height=50%"><br>
+                    <!--    <a href="#">Apoiadores</a> -->
+                        <!-- Botão para acionar modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalLongoExemplo3">
+                        Empresas Apoiadoras
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalLongoExemplo3" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                         <!--   <div class="modal-dialog" role="document"> -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="TituloModalLongoExemplo3">Apoiadores</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-4">
+                                                <img src="~/Imagem/envelope.JPG" style="width:100%;height=80%">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Empresa1</h4>
+                                                descricao
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-4">
+                                                <img src="~/Imagem/envelope.JPG" style="width:100%;height=80%">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Empresa2</h4>
+                                                descricao
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-4">
+                                                <img src="~/Imagem/envelope.JPG" style="width:100%;height=80%">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Empresa3</h4>
+                                                descricao
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-4">
+                                                <img src="~/Imagem/envelope.JPG" style="width:100%;height=80%">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Empresa4</h4>
+                                                descricao
+                                            </div>
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                             <!--           <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+            </div>
         </div>
-    </div>
-    <div class="col-md-2">
-        <a href="#">Agenda de eventos</a>
-    </div>
-    <div class="col-md-2">        
-        <a href="#">Dicas de vida saudável</a>
-    </div>
-    <div class="col-md-2">
-        <a href="#">Apoiadores</a>
-    </div>
-</div>
+        <partial name="_ModalAgenda" />
+    </body>
+    <script type="text/javascript" src="~/js/site.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</html>

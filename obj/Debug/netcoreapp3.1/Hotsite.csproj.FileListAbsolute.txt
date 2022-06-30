@@ -64,3 +64,4 @@ C:\Users\flper\Documents\EAD Senac\UC06\projetohotsite\bin\Debug\netcoreapp3.1\S
 C:\Users\flper\Documents\EAD Senac\UC06\projetohotsite\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
 C:\Users\flper\Documents\EAD Senac\UC06\projetohotsite\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 C:\Users\flper\Documents\EAD Senac\UC06\projetohotsite\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+C:\Users\flper\Documents\EAD Senac\UC06\projetohotsite\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ModalAgenda.cshtml.g.cs
